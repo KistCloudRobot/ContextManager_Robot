@@ -82,6 +82,7 @@
     currentBothHandArtifact/1,
     currentOneAndBothHandArtifact/1,
     priorVertex/2,
+    stationVertex/2,
     moveType/3,
     moveTypeIn/2,
     moveTypeOut/2,
@@ -1212,7 +1213,11 @@ priorVertex(Station, Vertex):-
 	  rdfs_individual_of(Station, arbi:'Station'),
 	  rdf(Station, knowrob:preparationVertex, literal(type(_,V1x))),atom_to_term(V1x,V1X,_),
 	  Vertex = V1X.
-	  
+stationVertex(Station, Vertex):-
+	  rdfs_individual_of(Station, arbi:'Station'),
+	  rdf(Station, knowrob:vertexnum, literal(type(_,V1x))),atom_to_term(V1x,V1X,_),
+	  Vertex = V1X.
+	  	  
 moveTypeIn(Station, MoveType):-
       rdfs_individual_of(Station, arbi: 'Station'),
       rdf(Station, knowrob:moveTypeIn, literal(type(_,V1x))),atom_to_term(V1x,V1X,_),
