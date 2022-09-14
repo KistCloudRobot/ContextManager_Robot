@@ -524,19 +524,7 @@
        <knowrob:vertexnum rdf:datatype="http://www.w3.org/2001/XMLSchema#double">37</knowrob:vertexnum>
    </owl:NamedIndividual>         
 
-   <owl:NamedIndividual rdf:about="&arbi;station38">
-       <rdf:type rdf:resource="&knowrob;Point3D"/>
-       <rdf:type rdf:resource="&arbi;ChargingStation"/>
-       <rdf:type rdf:resource="&arbi;Station"/>
-       <knowrob:xCoord rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.7</knowrob:xCoord>
-       <knowrob:yCoord rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19.7</knowrob:yCoord>
-       <knowrob:zCoord rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-0.6215511</knowrob:zCoord>
-       <knowrob:radius rdf:datatype="&xsd;double">10</knowrob:radius>
-       <knowrob:preparationVertex rdf:datatype="&xsd;double">158</knowrob:preparationVertex>
-       <knowrob:moveTypeIn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"(GuideMove 308)"</knowrob:moveTypeIn>
-       <knowrob:moveTypeOut rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"(GuideMove 158)"</knowrob:moveTypeOut>
-       <knowrob:vertexnum rdf:datatype="http://www.w3.org/2001/XMLSchema#double">501</knowrob:vertexnum>
-   </owl:NamedIndividual>  
+ 
  
    <owl:NamedIndividual rdf:about="&arbi;station38">
        <rdf:type rdf:resource="&knowrob;Point3D"/>
