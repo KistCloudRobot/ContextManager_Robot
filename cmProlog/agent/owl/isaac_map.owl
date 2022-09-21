@@ -80,7 +80,7 @@
 	    <knowrob:zCoord rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-0.6215511</knowrob:zCoord>
 	    <knowrob:radius rdf:datatype="&xsd;double">10</knowrob:radius>
 	    <knowrob:preparationVertex rdf:datatype="&xsd;double">152</knowrob:preparationVertex>
-	    <knowrob:moveTypeIn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"(GuideMove 1 \"Backward\")"</knowrob:moveTypeIn>
+	    <knowrob:moveTypeIn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"(PreciseMove 1)"</knowrob:moveTypeIn>
 	    <knowrob:moveTypeOut rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"(StraightBackMove 152)"</knowrob:moveTypeOut>
 	    <knowrob:vertexnum rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1</knowrob:vertexnum>
 	</owl:NamedIndividual>
@@ -94,6 +94,8 @@
 	    <knowrob:zCoord rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-0.6215511</knowrob:zCoord>
 	    <knowrob:radius rdf:datatype="&xsd;double">10</knowrob:radius>
 	    <knowrob:preparationVertex rdf:datatype="&xsd;double">150</knowrob:preparationVertex>
+	    <knowrob:moveTypeIn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"(PreciseMove 2)"</knowrob:moveTypeIn>
+        <knowrob:moveTypeOut rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"(StraightBackMove 150)"</knowrob:moveTypeOut>
 	    <knowrob:vertexnum rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2</knowrob:vertexnum>
 	</owl:NamedIndividual>
 	
