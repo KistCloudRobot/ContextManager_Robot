@@ -21,6 +21,7 @@ import kgu.agent.demo.actionArgument.LatestPerceptionArgument;
 import kgu.agent.demo.actionArgument.LowLevelContextMonitorArgument;
 import kgu.agent.demo.actionArgument.ReasoningQueryArgument;
 import kr.ac.uos.ai.arbi.Broker;
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
 import kr.ac.uos.ai.arbi.agent.logger.AgentAction;
@@ -63,7 +64,7 @@ public class Robot_CM extends ArbiAgent {
 	DataSource ds;
 	public Robot_CM(String robotID, String brokerAddress) {
 		this.brokerAddress = brokerAddress;
-		ArbiAgentExecutor.execute(brokerAddress, CONTEXTMANAGER_ADRESS, this, 2);
+		ArbiAgentExecutor.execute(brokerAddress, CONTEXTMANAGER_ADRESS, this, BrokerType.ACTIVEMQ);
 		init_prolog();
 		ds = new DataSource(){
 			boolean Subscripting_start = false;
@@ -137,7 +138,7 @@ public class Robot_CM extends ArbiAgent {
 		latestPerceptionAction = new AgentAction("RobotContext", action8);
 		LoggerManager.getInstance().registerAction(latestPerceptionAction, LogTiming.Later);
 
-		ds.connect(brokerAddress, "ds://www.arbi.com/ContextManager", 2);
+		ds.connect(brokerAddress, "ds://www.arbi.com/ContextManager", BrokerType.ACTIVEMQ);
 		ds.subscribe("(rule (fact (robotPosition $robotID $x $y)) --> (notify (robotPosition $robotID $x $y)))");
 		ds.subscribe("(rule (fact (robotStatus $robotID $x)) --> (notify (robotStatus $robotID $x)))");
 		ds.subscribe("(rule (fact (robotSpeed $robotID $x)) --> (notify (robotSpeed $robotID $x)))");
