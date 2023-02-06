@@ -89,9 +89,8 @@
     faceToFace/2,
     nearBy/3,
     deadLock/2,
-    hwanSong/2
-
-       
+    hwanSong/2,
+    stationType/2   
     ]).
 
 set([], []).
@@ -1279,7 +1278,11 @@ nearBy(Robot1, Robot2, Pose):-
 deadLock(Robot1, Robot2):-
        nearBy(Robot1, Robot2),
        faceToFace(Robot1, Robot2).
-
+       
+stationType(Station, StationType):-
+	rdfs_individual_of(Station, arbi: 'Station'),
+	rdf(Station, knowrob:stationType, literal(type(_,V1x))),atom_to_term(V1x,V1X,_),
+	StationType = V1X.
 
 
       
