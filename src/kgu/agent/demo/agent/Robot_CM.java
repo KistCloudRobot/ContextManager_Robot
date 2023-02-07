@@ -62,9 +62,9 @@ public class Robot_CM extends ArbiAgent {
 	public static String brokerAddress;
 	LatestPerceptionAction action8;
 	DataSource ds;
-	public Robot_CM(String robotID, String brokerAddress) {
+	public Robot_CM(String robotID, String brokerAddress, int brokerPort) {
 		this.brokerAddress = brokerAddress;
-		ArbiAgentExecutor.execute(brokerAddress, CONTEXTMANAGER_ADRESS, this, BrokerType.ACTIVEMQ);
+		ArbiAgentExecutor.execute(brokerAddress, brokerPort,CONTEXTMANAGER_ADRESS, this, BrokerType.ACTIVEMQ);
 		init_prolog();
 		ds = new DataSource(){
 			boolean Subscripting_start = false;
@@ -138,7 +138,7 @@ public class Robot_CM extends ArbiAgent {
 		latestPerceptionAction = new AgentAction("RobotContext", action8);
 		LoggerManager.getInstance().registerAction(latestPerceptionAction, LogTiming.Later);
 
-		ds.connect(brokerAddress, "ds://www.arbi.com/ContextManager", BrokerType.ACTIVEMQ);
+		ds.connect(brokerAddress, brokerPort,"ds://www.arbi.com/ContextManager", BrokerType.ACTIVEMQ);
 		ds.subscribe("(rule (fact (robotPosition $robotID $x $y)) --> (notify (robotPosition $robotID $x $y)))");
 		ds.subscribe("(rule (fact (robotStatus $robotID $x)) --> (notify (robotStatus $robotID $x)))");
 		ds.subscribe("(rule (fact (robotSpeed $robotID $x)) --> (notify (robotSpeed $robotID $x)))");
@@ -183,9 +183,9 @@ public class Robot_CM extends ArbiAgent {
 			robotID = args[0];
 			brokerAddress = args[1];
 		}
-		Robot_CM agent = new Robot_CM("AMR_LIFT1", "tcp://127.0.0.1:61120");
+//		Robot_CM agent = new Robot_CM("AMR_LIFT1", "tcp://127.0.0.1:61120");
 //		Robot_CM agent2 = new Robot_CM("AMR_LIFT2", "tcp://127.0.0.1:61121");
-		Robot_CM agent2 = new Robot_CM("AMR_LIFT2", "tcp://127.0.0.1:61123");
+//		Robot_CM agent2 = new Robot_CM("AMR_LIFT2", "tcp://127.0.0.1:61123");
 	}
 	public static void log(String log) {
 		try {
