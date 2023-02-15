@@ -76,7 +76,7 @@ public class Robot_CM extends ArbiAgent {
 
 					Subscripting_start = true;
 				}
-				System.out.println("Notification : " + data);
+				//System.out.println("Notification : " + data);
 
 				GeneralizedList gl = null;
 				

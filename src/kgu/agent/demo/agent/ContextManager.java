@@ -184,7 +184,7 @@ public class ContextManager extends ArbiAgent {
 
 	public void onNotify(String sender, String notification) {
 
-		System.out.println(notification);
+		//System.out.println(notification);
 
 	}
 
