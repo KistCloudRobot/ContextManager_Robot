@@ -11,7 +11,7 @@ public class Lift1_CM {
 			robotID = "AMR_LIFT1";	
 //			brokerAddress = "127.0.0.1";
 //			brokerAddress = "192.168.100.10";
-			brokerAddress = "172.16.165.143";
+			brokerAddress = "172.16.165.158";
 			port = 61116;
 		} else {
 			robotID = args[0];
