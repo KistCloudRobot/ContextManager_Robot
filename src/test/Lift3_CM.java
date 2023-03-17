@@ -9,9 +9,9 @@ public class Lift3_CM {
 		int port = 0;
 		if(args.length == 0) {
 			robotID = "AMR_LIFT3";	
-//			brokerAddress = "127.0.0.1";
-//			brokerAddress = "192.168.100.10";
-			brokerAddress = "172.16.165.143";
+			brokerAddress = "127.0.0.1";
+	//		brokerAddress = "192.168.0.161";
+//			brokerAddress = "172.16.165.143";
 			port = 61114;
 		} else {
 			robotID = args[0];

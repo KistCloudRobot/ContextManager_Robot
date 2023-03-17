@@ -24,9 +24,9 @@ import kr.ac.uos.ai.arbi.Broker;
 import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
-import kr.ac.uos.ai.arbi.agent.logger.AgentAction;
 import kr.ac.uos.ai.arbi.agent.logger.LogTiming;
 import kr.ac.uos.ai.arbi.agent.logger.LoggerManager;
+import kr.ac.uos.ai.arbi.agent.logger.action.AgentAction;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
 import kgu.agent.demo.actionArgument.SubscribeArgument;
 
