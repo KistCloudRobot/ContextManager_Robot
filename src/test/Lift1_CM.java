@@ -9,9 +9,15 @@ public class Lift1_CM {
 		int port = 0;
 		if(args.length == 0) {
 			robotID = "AMR_LIFT1";	
+<<<<<<< HEAD
 			brokerAddress = "127.0.0.1";
 	//		brokerAddress = "192.168.0.161";
 //			brokerAddress = "172.16.165.143";
+=======
+//			brokerAddress = "127.0.0.1";
+//			brokerAddress = "192.168.100.10";
+			brokerAddress = "172.16.165.158";
+>>>>>>> refs/remotes/origin/ansung_demo
 			port = 61116;
 		} else {
 			robotID = args[0];
